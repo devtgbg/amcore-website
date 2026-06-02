@@ -1,8 +1,7 @@
 *
 !.gitignore
-!site/
-!site/index.html
-!site/assets/
-!site/assets/**
-!site/pages/
-!site/pages/**
+!index.html
+!assets/
+!assets/**
+!pages/
+!pages/**
