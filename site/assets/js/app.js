@@ -13,6 +13,7 @@ const pageFiles = {
   products: "products.html",
   product: "product.html",
   applications: "applications.html",
+  downloads: "downloads.html",
   technology: "technology.html",
   support: "support.html",
   contact: "contact.html"
@@ -50,6 +51,7 @@ function navLinks(currentPage) {
     ["home", "Home"],
     ["products", "Products"],
     ["applications", "Applications"],
+    ["downloads", "Downloads"],
     ["technology", "Technology"],
     ["support", "Support"],
     ["contact", "Contact"]
@@ -97,6 +99,7 @@ function renderShell() {
           <h3>Explore</h3>
           <a href="${pageHref("products")}">Product Range</a>
           <a href="${pageHref("applications")}">Applications</a>
+          <a href="${pageHref("downloads")}">Downloads</a>
           <a href="${pageHref("technology")}">Technology</a>
           <a href="${pageHref("support")}">Warranty & Support</a>
         </div>
@@ -327,6 +330,24 @@ function renderTechnologyCards() {
     .join("");
 }
 
+function renderBrochureCards() {
+  const host = document.querySelector("[data-brochure-cards]");
+  if (!host) return;
+
+  host.innerHTML = siteData.brochures
+    .map(
+      (item) => `
+        <article class="feature-card reveal-card brochure-card">
+          <p class="eyebrow">PDF Download</p>
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+          <a class="button button-download" href="${assetPath(item.file)}" download>${item.label}</a>
+        </article>
+      `
+    )
+    .join("");
+}
+
 function renderProtectionList() {
   const host = document.querySelector("[data-protection-list]");
   if (!host) return;
@@ -373,7 +394,10 @@ function renderSupportHighlights() {
       (item) => `
         <article class="support-point reveal-card">
           <span class="support-icon">${icons[item.icon] || ""}</span>
-          <p>${item.text}</p>
+          <div class="support-copy">
+            <h3>${item.title}</h3>
+            <p>${item.text}</p>
+          </div>
         </article>
       `
     )
@@ -518,6 +542,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderComparisonTable();
   setupComparisonSorting();
   renderTechnologyCards();
+  renderBrochureCards();
   renderProtectionList();
   renderSupportHighlights();
   renderContactCards();

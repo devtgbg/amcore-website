@@ -1,2 +1,8 @@
-/brochure
-/brochure_extract
+*
+!.gitignore
+!site/
+!site/index.html
+!site/assets/
+!site/assets/**
+!site/pages/
+!site/pages/**

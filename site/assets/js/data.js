@@ -123,6 +123,38 @@ window.AMPCORE_SITE_DATA = {
       body: "Lifting handles, secure mounting, and accessible interfaces make installation and servicing more straightforward."
     }
   ],
+  brochures: [
+    {
+      title: "Overall Product Brochure",
+      description: "A full overview of the AmpCore range, positioning, support, and key product information in one document.",
+      file: "assets/downloads/20260526-AMPCore-Brochure-Final.pdf",
+      label: "Download Full Brochure"
+    },
+    {
+      title: "AMPCORE 51-105 Brochure",
+      description: "Product brochure for the 51.2V 105Ah model with specifications and positioning details.",
+      file: "assets/downloads/20260526-AMPCore-Brochure-51-105.pdf",
+      label: "Download 51-105 PDF"
+    },
+    {
+      title: "AMPCORE 51-150 Brochure",
+      description: "Product brochure for the 51.2V 150Ah model covering the core technical and product details.",
+      file: "assets/downloads/20260526-AMPCore-Brochure-51-150.pdf",
+      label: "Download 51-150 PDF"
+    },
+    {
+      title: "AMPCORE 51-210 Brochure",
+      description: "Product brochure for the 51.2V 210Ah model focused on higher-capacity use cases and specifications.",
+      file: "assets/downloads/20260526-AMPCore-Brochure-51-210.pdf",
+      label: "Download 51-210 PDF"
+    },
+    {
+      title: "AMPCORE 77-105 Brochure",
+      description: "Product brochure for the 76.8V 105Ah model for higher-voltage vehicle applications.",
+      file: "assets/downloads/20260526-AMPCore-Brochure-77-105.pdf",
+      label: "Download 77-105 PDF"
+    }
+  ],
   protection: [
     "Overcharge protection",
     "Over-discharge protection",
@@ -136,19 +168,23 @@ window.AMPCORE_SITE_DATA = {
   supportHighlights: [
     {
       icon: "shield",
-      text: "Up to 6 years of standard warranty cover"
+      title: "Standard Warranty Cover",
+      text: "Up to 6 years of standard warranty cover for eligible systems, giving owners clearer protection from day one."
     },
     {
       icon: "calendar",
-      text: "Extended support options available up to 8 years"
+      title: "Extended Support Options",
+      text: "Extended support options are available up to 8 years for customers who want longer-term ownership confidence."
     },
     {
       icon: "support",
-      text: "UAE-based technical support and diagnostics"
+      title: "Local Technical Support",
+      text: "UAE-based technical support and diagnostics help make troubleshooting, service guidance, and follow-up easier to access."
     },
     {
       icon: "sun",
-      text: "Designed for long service life in demanding regional conditions"
+      title: "Built For Regional Conditions",
+      text: "Designed for long service life in demanding regional conditions, including high temperatures and frequent daily use."
     }
   ],
   contacts: [
@@ -156,7 +192,7 @@ window.AMPCORE_SITE_DATA = {
       name: "Umida Mirzoeva",
       role: "Sales",
       email: "umida@ampcore.tech",
-      phone: "+971 58 946 5115",
+      phone: "+971 50 479 6338",
       image: "assets/images/umida-mirzoeva.jpg"
     },
     {

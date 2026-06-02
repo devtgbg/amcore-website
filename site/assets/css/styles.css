@@ -496,6 +496,10 @@ h3 {
   font-weight: 700;
 }
 
+.button-download {
+  justify-self: start;
+}
+
 .section {
   padding: 56px 0;
 }
@@ -591,6 +595,10 @@ h3 {
   display: grid;
   align-content: start;
   gap: 18px;
+}
+
+.brochure-card {
+  min-height: 100%;
 }
 
 .product-card::before,
@@ -867,7 +875,7 @@ h3 {
 .support-point {
   display: grid;
   gap: 16px;
-  min-height: 180px;
+  min-height: 220px;
 }
 
 .support-point span {
@@ -883,6 +891,21 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.support-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.support-copy h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.08;
+}
+
+.support-copy p {
+  max-width: 30ch;
 }
 
 .support-icon svg {
