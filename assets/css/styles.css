@@ -1014,6 +1014,14 @@ h3 {
   padding-top: 18px;
 }
 
+.contact-intro {
+  padding-top: 40px;
+}
+
+.contact-intro-spacer {
+  min-height: 1px;
+}
+
 .page-title .hero-lead,
 .hero-product .hero-lead {
   max-width: 48ch;
@@ -1131,6 +1139,10 @@ h3 {
 
   .hero-copy {
     gap: 14px;
+  }
+
+  .contact-intro {
+    padding-top: 24px;
   }
 
   .section-head {
