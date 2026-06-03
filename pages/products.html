@@ -8,9 +8,9 @@
       name="description"
       content="Explore the AmpCore Energy battery range across 51.2V and 76.8V platforms with full product specification pages."
     />
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260602-5" />
-    <script defer src="../assets/js/data.js?v=20260602-5"></script>
-    <script defer src="../assets/js/app.js?v=20260602-5"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260603-4" />
+    <script defer src="../assets/js/data.js?v=20260603-4"></script>
+    <script defer src="../assets/js/app.js?v=20260603-4"></script>
   </head>
   <body data-page="products">
     <header class="site-header" data-site-header></header>
@@ -47,8 +47,68 @@
           <div class="comparison-wrap reveal-card" data-comparison-table></div>
         </div>
       </section>
+
+      <section class="section">
+        <div class="shell-container custom-request-grid">
+          <article class="copy-block reveal">
+            <p class="eyebrow">Custom Battery Design</p>
+            <h2>Tell us the performance targets you need.</h2>
+            <p>
+              If you need something more specific than the standard range, you can share the battery targets you already have in mind and the team can review them with you.
+            </p>
+            <ul class="tick-list">
+              <li>All specification fields are optional.</li>
+              <li>Use the extra information box for vehicle, runtime, or installation notes.</li>
+              <li>Your request will open as an email draft to the sales team for follow-up support.</li>
+            </ul>
+            <p>
+              If you prefer, you can also send a manual request through the sales and support staff on the
+              <a class="text-link" href="contact.html#staff">Contact page</a>.
+            </p>
+          </article>
+          <article class="spec-panel reveal-card">
+            <p class="eyebrow">Design Request</p>
+            <h2>Share your ideal battery specification.</h2>
+            <form class="custom-battery-form" data-custom-battery-form>
+              <div class="custom-battery-form-grid">
+                <label class="field-group">
+                  <span>Desired Voltage (Optional)</span>
+                  <input type="text" name="voltage" placeholder="For example 51.2V or 76.8V" />
+                </label>
+                <label class="field-group">
+                  <span>Desired Capacity (Optional)</span>
+                  <input type="text" name="capacity" placeholder="For example 105Ah or 210Ah" />
+                </label>
+                <label class="field-group">
+                  <span>Desired Energy (Optional)</span>
+                  <input type="text" name="energy" placeholder="For example 5.38 kWh" />
+                </label>
+                <label class="field-group">
+                  <span>Desired Max Discharge (Optional)</span>
+                  <input type="text" name="maxDischarge" placeholder="For example 150 A (1C)" />
+                </label>
+              </div>
+              <label class="field-group field-group-full">
+                <span>Extra Information (Optional)</span>
+                <textarea
+                  name="extraInfo"
+                  rows="6"
+                  placeholder="Add any additional requirements, vehicle details, expected runtime, or installation notes."
+                ></textarea>
+              </label>
+              <div class="custom-battery-form-actions">
+                <button class="button" type="submit">Send Design Request</button>
+                <p class="form-note">This will open your email app with the request details already filled in.</p>
+              </div>
+            </form>
+          </article>
+        </div>
+      </section>
     </main>
     <footer class="site-footer" data-site-footer></footer>
   </body>
 </html>
+
+
+
 

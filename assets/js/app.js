@@ -46,14 +46,26 @@ function brandLockup() {
   `;
 }
 
+function revionLockup() {
+  return `
+    <div class="revion-lockup" aria-label="Revion Vehicle Technologies">
+      <img src="${assetPath("assets/brand/revion-mark.png")}" alt="" width="44" height="44" />
+      <span class="revion-copy">
+        <strong>REVION</strong>
+        <span>VEHICLE TECHNOLOGIES</span>
+      </span>
+    </div>
+  `;
+}
+
 function navLinks(currentPage) {
   const links = [
     ["home", "Home"],
-    ["products", "Products"],
     ["applications", "Applications"],
-    ["downloads", "Downloads"],
+    ["products", "Products"],
     ["technology", "Technology"],
     ["support", "Support"],
+    ["downloads", "Downloads"],
     ["contact", "Contact"]
   ];
 
@@ -93,7 +105,7 @@ function renderShell() {
       <div class="shell-container footer-grid">
         <div>
           ${brandLockup()}
-          <p class="footer-copy">Premium LiFePO4 battery systems for electric mobility, utility vehicles, and long-lasting regional reliability.</p>
+          ${revionLockup()}
         </div>
         <div>
           <h3>Explore</h3>
@@ -167,7 +179,7 @@ function renderProductsGrid() {
           <img src="${assetPath(product.image)}" alt="${product.name} battery render" loading="lazy" />
           <div class="range-actions">
             <span>${product.energy}</span>
-            <a class="button button-secondary" href="${pageHref("product", `?model=${product.slug}`)}">Open Product Page</a>
+            <a class="button" href="${pageHref("product", `?model=${product.slug}`)}">View Specification</a>
           </div>
         </article>
       `
@@ -425,6 +437,41 @@ function renderContactCards() {
     .join("");
 }
 
+function setupCustomBatteryForm() {
+  const form = document.querySelector("[data-custom-battery-form]");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const getValue = (key) => String(formData.get(key) || "").trim();
+    const subject = "Custom Battery Design Enquiry";
+    const body = [
+      "Hello AmpCore team,",
+      "",
+      "I would like support with a custom battery requirement.",
+      "",
+      `Desired Voltage: ${getValue("voltage") || "Not specified"}`,
+      `Desired Capacity: ${getValue("capacity") || "Not specified"}`,
+      `Desired Energy: ${getValue("energy") || "Not specified"}`,
+      `Desired Max Discharge: ${getValue("maxDischarge") || "Not specified"}`,
+      "",
+      "Extra Information:",
+      getValue("extraInfo") || "Not specified"
+    ].join("\r\n");
+
+    const mailtoHref = `mailto:sales@ampcore.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const tempLink = document.createElement("a");
+    tempLink.href = mailtoHref;
+    tempLink.style.display = "none";
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    tempLink.remove();
+    window.location.assign(mailtoHref);
+  });
+}
+
 function renderProductDetail() {
   const host = document.querySelector("[data-product-detail]");
   if (!host) return;
@@ -546,6 +593,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProtectionList();
   renderSupportHighlights();
   renderContactCards();
+  setupCustomBatteryForm();
   renderProductDetail();
   setupNavToggle();
   setupRevealAnimation();

@@ -674,6 +674,74 @@ h3 {
   color: var(--text);
 }
 
+.custom-battery-form {
+  display: grid;
+  gap: 22px;
+}
+
+.custom-battery-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.field-group {
+  display: grid;
+  gap: 10px;
+}
+
+.field-group span {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  border: 1px solid rgba(47, 49, 56, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--text);
+  caret-color: var(--brand);
+  padding: 15px 16px;
+  font: inherit;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.field-group input::placeholder,
+.field-group textarea::placeholder {
+  color: rgba(91, 98, 112, 0.72);
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  border-color: rgba(244, 91, 29, 0.42);
+  box-shadow: 0 0 0 4px rgba(244, 91, 29, 0.12);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.field-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.field-group-full {
+  grid-column: 1 / -1;
+}
+
+.custom-battery-form-actions {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.form-note {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
 .story-grid,
 .dual-panel,
 .section-grid-spec,
@@ -681,6 +749,13 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+}
+
+.custom-request-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: start;
 }
 
 .story-panel.dark-panel {
@@ -1053,6 +1128,40 @@ h3 {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.revion-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.revion-lockup img {
+  width: 44px;
+  height: 44px;
+}
+
+.revion-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.revion-copy strong {
+  color: #ffffff;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.6rem;
+  line-height: 0.9;
+  letter-spacing: 0.05em;
+}
+
+.revion-copy span {
+  color: rgba(255, 255, 255, 0.72);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
 .footer-grid .brand-copy strong {
   color: #ffffff;
 }
@@ -1090,6 +1199,7 @@ h3 {
   .story-grid,
   .dual-panel,
   .section-grid-spec,
+  .custom-request-grid,
   .contact-layout,
   .contact-grid,
   .footer-grid,
@@ -1154,6 +1264,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .custom-battery-form-grid {
+    grid-template-columns: 1fr;
+  }
+
   .range-actions {
     flex-direction: column;
     align-items: start;
@@ -1176,6 +1290,10 @@ h3 {
 
   .brand-copy strong {
     font-size: 1.65rem;
+  }
+
+  .revion-copy strong {
+    font-size: 1.35rem;
   }
 
   .hero-copy h1 {
